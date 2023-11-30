@@ -2,6 +2,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "morgan": "^1.10.0",
+    "mysql2": "^3.6.5",
     "nodemon": "^3.0.1"
   },
   "name": "proyecto-leo",
@@ -9,7 +10,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon ./src/app.js"
+    "dev": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "",
