@@ -1,7 +1,10 @@
 // app.js
 const express = require('express');
+const cors = require('cors'); // Importa el paquete cors
 const app = express();
 const port = 3000;
+// agregando cors para solicitudes
+app.use(cors());
 // Conexión a la base de datos
 const db = require('./db/connection');
 
