@@ -1,0 +1,6 @@
+iniciar una RESTapi
+npm init -y
+npm express morgam mysql2 sequalize(aqui debes ver la documentacion de sequalize para agregar)
+
+para usar la sintaxis de javascript moderno en el archivo package.json agregar
+"type";"module",
