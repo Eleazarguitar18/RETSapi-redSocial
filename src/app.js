@@ -48,7 +48,7 @@ app.get('/saluda', (req, res) => {
     res.send('¡Hola, mundo!');
 });
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/Presentacion_Backen _IA-4.jpeg');
+    res.sendFile(__dirname + '/public/Backend Eleazar.jpeg');
 })
 
 // Inicia el servidor y conecta a la base de datos
