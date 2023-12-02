@@ -1,3 +1,7 @@
+# archivos de entorno
+.env
+# Carpetas generadas por Node.js
 node_modules
+# archivos de consultas sql
 src/db/consultas.sql
 src/db/consuta.sql

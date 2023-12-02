@@ -1,7 +1,7 @@
 // db/connection.js
-const mysql = require('mysql2/promise');
+import { createPool } from 'mysql2/promise';
 
-const pool = mysql.createPool({
+const pool = createPool({
     host: 'bj5530vf4db8uj2yvtmz-mysql.services.clever-cloud.com',
     user: 'uybnct78drtacgm1',
     password: 'WHMqDPUShMWWvIhwoYOT',
@@ -11,4 +11,4 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-module.exports = pool;
+export default pool;

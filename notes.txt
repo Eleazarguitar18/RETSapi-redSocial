@@ -4,3 +4,4 @@ npm express morgam mysql2 sequalize(aqui debes ver la documentacion de sequalize
 
 para usar la sintaxis de javascript moderno en el archivo package.json agregar
 "type";"module",
+para poder usar import ...
