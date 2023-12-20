@@ -2,6 +2,9 @@
 .env
 # Carpetas generadas por Node.js
 node_modules
+# carpetas
+src/db
+
 # archivos de consultas sql
 src/db/consultas.sql
 src/db/consuta.sql
