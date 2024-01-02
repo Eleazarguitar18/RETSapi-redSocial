@@ -21,6 +21,8 @@ app.use(express.json());
 
 // Conexión a la base de datos
 // import db from './db/connection';
+import './database/models/usario_normal.js';
+// import './database/models/usario.js';
 async function main() {
     try {
         await sequelize.sync({ alter: true })

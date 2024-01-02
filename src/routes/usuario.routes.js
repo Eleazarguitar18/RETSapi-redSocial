@@ -6,3 +6,5 @@ Route.get('/usuario', usuarioController.listar)
 Route.post('/usuario', usuarioController.agregar)
 
 export default Route;
+const nombres = ''
+const nombrese = ''

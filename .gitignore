@@ -4,7 +4,7 @@
 node_modules
 # carpetas
 src/db
-
+view
 # archivos de consultas sql
 src/db/consultas.sql
 src/db/consuta.sql
