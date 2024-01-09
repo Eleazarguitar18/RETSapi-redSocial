@@ -25,7 +25,7 @@ import './database/models/usario_normal.js';
 // import './database/models/usario.js';
 async function main() {
     try {
-        await sequelize.sync({ alter: true })
+        // await sequelize.sync({ alter: true })
         await sequelize.authenticate();
         console.log('Connection has been established successfully.');
         app.listen(SERVER_PORT, () => {
