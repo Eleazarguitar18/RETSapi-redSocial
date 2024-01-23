@@ -44,3 +44,7 @@ export const Usuario = sequelize.define('Usuario', {
         allowNull: false,
     },
 })
+// Usuario.hasOne(UsuarioNormal, {
+//     foreignKey: 'idUsuario',
+//     constraints: false,
+// })

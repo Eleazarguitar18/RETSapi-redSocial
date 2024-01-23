@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../sequelize.config.js";
 import { Usuario } from "./usuario.js";
 // creando el modelo para crear la tabla
-export const UsuarioNormal = sequelize.define('Usuario_Normal', {
+export const UsuarioNormal = sequelize.define('UsuarioNormal', {
     idUsuario: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -22,13 +22,11 @@ export const UsuarioNormal = sequelize.define('Usuario_Normal', {
     }
 })
 
-// UsuarioNormal.hasOne(Usuario, {
-//     as: 'usuario',
-//     foreignKey: 'idUsuario',
-//     constraints: false
-// })
+UsuarioNormal.belongsTo(Usuario, {
+    foreignKey: 'idUsuario',
+    constraints: false
+})
 // Usuario.hasOne(UsuarioNormal, {
-//     as: 'usuarioNormal',
 //     foreignKey: 'idUsuario',
 //     constraints: false,
 // })
