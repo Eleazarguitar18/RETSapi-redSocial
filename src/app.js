@@ -21,7 +21,7 @@ app.use(express.json());
 
 // Conexión a la base de datos
 // import db from './db/connection';
-import './database/models/usario_normal.js';
+import './database/models/usuario_normal.js';
 // import './database/models/usario.js';
 async function main() {
     try {
@@ -40,9 +40,10 @@ async function main() {
 // import router from './routes/index.js';
 // app.use('/api', router);
 import usuarioRoute from "./routes/usuario.routes.js";
-
+import usuarioNormalRoute from "./routes/usuarioNormal.routes.js";
 // Habilitacion de rutas
-app.use('/api', usuarioRoute)
+app.use('/api', usuarioRoute)//ruta del usuario
+app.use('/api', usuarioNormalRoute)//ruta del usuario
 
 
 // Ruta principal
