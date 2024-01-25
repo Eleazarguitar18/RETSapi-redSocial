@@ -48,3 +48,14 @@ export const Usuario = sequelize.define('Usuario', {
 //     foreignKey: 'idUsuario',
 //     constraints: false,
 // })
+/*
+ci
+nombres
+apPaterno
+apMaterno
+fecha_nac
+genero
+correo
+telefono
+contrasenia
+*/

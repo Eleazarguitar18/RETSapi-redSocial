@@ -1,0 +1,9 @@
+npm i nodemon -D
+-D es para que solo se instale en desarrollo y no se intale cuando este en produccion
+SPA lectura para formatos json
+
+
+recreo familiar 28 de enero
+14 posible cocinada
+
+<div class="relative order-1 min-h-[225px] min-w-[225px] overflow-hidden grayscale md:hidden md:overflow-auto"><video autoplay="" loop="" playsinline="" class="absolute left-0 top-0 h-[225px] w-[225px]" height="255" poster="/static/cube-fallback.jpg" src="/static/cube.mp4" width="255"></video></div>

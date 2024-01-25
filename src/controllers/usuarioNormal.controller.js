@@ -1,4 +1,5 @@
 import usuarioNormalService from "../services/usuarioNormal.service.js";
+// import registroService from "../services/registro.service.js";
 
 export default {
     listar: async (req, res) => {
@@ -13,6 +14,7 @@ export default {
         try {
             const nuevo = req.body
             console.log(nuevo)
+            // await registroService.enviarCodigo(nuevo)
             const usuario = await usuarioNormalService.agregarUsuarioNormal(nuevo)
             // respuesta al cliente
             return res

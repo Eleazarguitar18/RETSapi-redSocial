@@ -1,6 +1,7 @@
 // app.js
 import express from 'express';
 import cors from 'cors'; // Importa el paquete cors
+import morgan from "morgan";
 import { sequelize } from "./database/sequelize.config.js";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -17,6 +18,7 @@ const SERVER_PORT = SERVER.PORT;
 // midelwares
 // agregando cors para solicitudes
 app.use(cors());
+app.use(morgan('dev'));
 app.use(express.json());
 
 // Conexión a la base de datos
@@ -41,10 +43,12 @@ async function main() {
 // app.use('/api', router);
 import usuarioRoute from "./routes/usuario.routes.js";
 import usuarioNormalRoute from "./routes/usuarioNormal.routes.js";
-// Habilitacion de rutas
+import registroRoute from "./routes/registro.routes.js";
+//* Habilitacion de rutas
 app.use('/api', usuarioRoute)//ruta del usuario
-app.use('/api', usuarioNormalRoute)//ruta del usuario
-
+app.use('/api', usuarioNormalRoute)//ruta del usuario_normal
+app.use('/api', registroRoute)//ruta del usuario
+// app.use('/api',)
 
 // Ruta principal
 app.get('/saluda', (req, res) => {
