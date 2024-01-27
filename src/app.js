@@ -44,10 +44,12 @@ async function main() {
 import usuarioRoute from "./routes/usuario.routes.js";
 import usuarioNormalRoute from "./routes/usuarioNormal.routes.js";
 import registroRoute from "./routes/registro.routes.js";
+import loginRoute from "./routes/login.routes.js";
 //* Habilitacion de rutas
 app.use('/api', usuarioRoute)//ruta del usuario
 app.use('/api', usuarioNormalRoute)//ruta del usuario_normal
 app.use('/api', registroRoute)//ruta del usuario
+app.use('/api', loginRoute)//ruta del usuario
 // app.use('/api',)
 
 // Ruta principal
