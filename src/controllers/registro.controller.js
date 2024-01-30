@@ -8,6 +8,9 @@ export default {
             const nuevo = req.body
             datos = nuevo
             respuestaCorreo = await registroService.enviarCodigo(nuevo)
+            if (!respuestaCorreo.envio) {
+                return res.status(404).json({ data: respuestaCorreo })
+            }
             return res.status(200).json({ data: respuestaCorreo })
         } catch (error) {
             return res.status(500).json({ mensaje: 'Error al enviar el correo', message: error.message })
@@ -18,7 +21,7 @@ export default {
 
             const codigoRecibido = req.params.codigo
             const codigoEnviado = respuestaCorreo.codigoVerificacion
-            console.log(codigoRecibido, '    ', codigoEnviado);
+            console.log('codigo recibido: ', codigoRecibido, '    ', 'codigo recibido: ', codigoEnviado);
             if (codigoRecibido.toString() === codigoEnviado.toString()) {
                 const usuario = await usuarioService.agregarUsuario(datos)
                 // respuesta al cliente

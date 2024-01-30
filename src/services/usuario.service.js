@@ -15,5 +15,23 @@ export default {
     },
     listarUsuario: async () => {
         return await Usuario.findAll()
+    },
+    obtenerUsuario: async (id) => {
+        return await Usuario.findByPk(id);
+    },
+    buscarUsuarioRegistro: async (xcorreo) => {
+        const usuario = await Usuario.findAll(
+            {
+                where: {
+                    correo: xcorreo
+                }
+            }
+        );
+        if (usuario.length > 0) {
+            // Se encontraron resultados
+            console.log('Correo registrado:');
+            return true
+        }
+        return false;
     }
 }

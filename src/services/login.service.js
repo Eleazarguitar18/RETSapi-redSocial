@@ -54,7 +54,7 @@ export default {
 
         ans.code = 200;
         ans.message = "Usuario encontrado";
-        ans.data = credenciales;
+        ans.data = usuario;
       } else {
         console.log("contrasenia incorrecta")
         ans.message = "contrasenia incorrecta";
