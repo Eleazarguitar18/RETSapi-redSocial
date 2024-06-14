@@ -14,6 +14,15 @@ export const MYSQL = {
     PASSWORD: process.env.MYSQL_ADDON_PASSWORD,
     URI: process.env.MYSQL_ADDON_URI,
 }
+
+export const POSTGRESQL = {
+    HOST: process.env.POSTGRESQL_ADDON_HOST,
+    DB: process.env.POSTGRESQL_ADDON_DB,
+    USER: process.env.POSTGRESQL_ADDON_USER,
+    PORT: process.env.POSTGRESQL_ADDON_PORT,
+    PASSWORD: process.env.POSTGRESQL_ADDON_PASSWORD,
+    URI: process.env.POSTGRESQL_ADDON_URI,
+}
 export const SERVER = {
     HOST: process.env.SERVER_HOST || "localhost",
     PORT: process.env.PORT || "3000",
