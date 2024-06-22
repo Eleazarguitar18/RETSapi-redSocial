@@ -1,6 +1,13 @@
 import bcrypt from "bcrypt";
 import { Usuario } from "../database/models/usuario.js";
 import { enviarCorreoLogin } from "../test/envioCorreo.js";
+import jwt from "jsonwebtoken";
+
+const secret = process.env.SECRET;
+const generarToken = (user) => {
+  const token = jwt.sign({ id: user.idUsuario, email: user.correo }, secret, { expiresIn: '1h', })
+  return token;
+}
 export default {
   verificaCredenciales: async (credenciales) => {
     console.log("entrando a verificar las credenciales: ", credenciales)
@@ -55,13 +62,15 @@ export default {
         ans.code = 200;
         ans.message = "Usuario encontrado";
         ans.data = usuario;
+        ans.token = generarToken(usuario)
       } else {
         console.log("contrasenia incorrecta")
         ans.message = "contrasenia incorrecta";
       }
 
     }
-    console.log(ans)
+    console.log("Usuario econtrado y autenticado")
     return ans;
   },
 };
+
