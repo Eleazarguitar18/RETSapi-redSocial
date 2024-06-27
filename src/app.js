@@ -14,10 +14,15 @@ const app = express();
 const SERVER_HOST = SERVER.HOST;
 const SERVER_PORT = SERVER.PORT;
 // console.log(port);
-
+const corsOptions = {
+    origin: (origin, callback) => {
+        callback(null, true);
+    },
+    credentials: true,
+}
 // midelwares
 // agregando cors para solicitudes
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(morgan('dev'));
 app.use(express.json());
 
